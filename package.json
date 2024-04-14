@@ -8,6 +8,13 @@
         "name": "Cortney Thomas",
         "email": "cortney.thomas@1st.com"
     },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/cortneythomas/cordova-plugin-universal-links.git"
+    },
+    "bugs": {
+        "url": "https://github.com/cortneythomas/cordova-plugin-universal-links/issues"
+    },
     "keywords": [
         "cordova",
         "plugin",
