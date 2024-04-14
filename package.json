@@ -1,0 +1,16 @@
+{
+    "version": "1.0.0",
+    "name": "cordova-plugin-universal-links",
+    "cordova_name": "CordovaPluginUniversalLinks",
+    "description": "Cordova Plugin Universal Links",
+    "license": "Apache 2.0",
+    "author": {
+        "name": "Cortney Thomas",
+        "email": "cortney.thomas@1st.com"
+    },
+    "keywords": [
+        "cordova",
+        "plugin",
+        "template"
+    ]
+}

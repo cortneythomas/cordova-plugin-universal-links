@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" id="cordova-plugin-universal-links" version="1.0.0">
+
+<name>Universal Links Plugin</name>
+<description>Adds Universal Links support for iOS devices.</description>
+<license>MIT</license>
+<keywords>cordova,plugins,links,universal</keywords>
+
+<js-module name="links" src="www/links.js">
+    <clobbers target="UniversalLinks"/>
+</js-module>
+
+<platform name="ios">
+    <config-file target="config.xml" parent="/*">
+        <feature name="UniversalLinks">
+            <param name="ios-package" value="UniversalLinks" onload="true" />
+        </feature>
+    </config-file>
+    <header-file src="src/ios/UniversalLinks.h" />
+    <source-file src="src/ios/UniversalLinks.m" />
+</platform>
+
+</plugin>
