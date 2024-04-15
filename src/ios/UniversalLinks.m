@@ -48,6 +48,7 @@
     NSURLComponents *urlComponents = [NSURLComponents componentsWithURL:launchURL resolvingAgainstBaseURL:YES];
     Host *host = nil;
     for (Host *supportedHost in _supportedHosts) {
+        NSLog(@"Cortney each host in supported host: %@", supportedHost.name);
         NSPredicate *pred = [NSPredicate predicateWithFormat:@"self LIKE[c] %@", supportedHost.name];
         if ([pred evaluateWithObject:urlComponents.host]) {
             host = supportedHost;
@@ -59,8 +60,9 @@
 }
 
 - (NSArray<Host *> *)getSupportedHostsFromPreferences {
-  NSLog(@"Cortney getSupportedHostsFromPreferences: %@");
+  
     NSString *jsonConfigPath = [[NSBundle mainBundle] pathForResource:@"ul" ofType:@"json" inDirectory:@"www"];
+    NSLog(@"Cortney jsonConfigPath in getSupportedHostsFromPreferences: %@", jsonConfigPath);
     if (jsonConfigPath) {
         return [JsonParser parseConfig:jsonConfigPath];
     }
@@ -82,7 +84,7 @@
 }
 
 - (void)localInit {
-  NSLog(@"Cortney localInit: %@");
+  NSLog(@"Cortney localInit: %@", _supportedHosts);
     if (_supportedHosts) {
         return;
     }
@@ -125,13 +127,13 @@
  *  If not - it will stay until someone subscribes to it.
  */
 - (void)tryToConsumeEvent {
-  NSLog(@"Cortney tryToConsumeEvent: %@");
     if (_subscribers.count == 0 || _storedEvent == nil) {
         return;
     }
 
     NSString *storedEventName = [_storedEvent eventName];
     for (NSString *eventName in _subscribers) {
+        NSLog(@"Cortney tryToConsumeEvent eventname: %@", eventName);
         if ([storedEventName isEqualToString:eventName]) {
             NSString *callbackID = _subscribers[eventName];
             [self.commandDelegate sendPluginResult:_storedEvent callbackId:callbackID];
@@ -157,6 +159,7 @@
 
     NSURL *launchURL = userActivity.webpageURL;
     Host *host = [self findHostByURL:launchURL];
+    NSLog(@"Cortney host is handleuseractivity: %@", host);
     if (host == nil) {
         return NO;
     }
