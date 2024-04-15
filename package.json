@@ -10,10 +10,7 @@
       "ios"
     ]
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/cortneythomas/cordova-plugin-universal-links.git"
-  },
+  "repository": "github.com:cortneythomas/cordova-plugin-universal-links.git",
   "bugs": {
     "url": "https://github.com/cortneythomas/cordova-plugin-universal-links/issues"
   },
@@ -22,9 +19,5 @@
     "plugin",
     "template"
   ],
-  "homepage": "https://github.com/cortneythomas/cordova-plugin-universal-links#readme",
-  "main": "links.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  }
+  "homepage": "https://github.com/cortneythomas/cordova-plugin-universal-links#readme"
 }
