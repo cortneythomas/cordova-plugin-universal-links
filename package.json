@@ -1,28 +1,30 @@
 {
-    "version": "1.0.0",
-    "name": "cordova-plugin-universal-links",
-    "description": "Cordova Plugin Universal Links",
-    "license": "MIT",
-    "author": {
-        "name": "Cortney Thomas",
-        "email": "cortney.thomas@1st.com"
-    },
-    "cordova": {
-        "id": "cordova-plugin-universal-links",
-        "platforms": [
-          "ios"
-        ]
-    },
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/cortneythomas/cordova-plugin-universal-links.git"
-    },
-    "bugs": {
-        "url": "https://github.com/cortneythomas/cordova-plugin-universal-links/issues"
-    },
-    "keywords": [
-        "cordova",
-        "plugin",
-        "template"
+  "version": "1.0.0",
+  "name": "cordova-plugin-universal-links",
+  "description": "Cordova Plugin Universal Links",
+  "license": "MIT",
+  "author": "Cortney Thomas <cortney.thomas@1st.com>",
+  "cordova": {
+    "id": "cordova-plugin-universal-links",
+    "platforms": [
+      "ios"
     ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cortneythomas/cordova-plugin-universal-links.git"
+  },
+  "bugs": {
+    "url": "https://github.com/cortneythomas/cordova-plugin-universal-links/issues"
+  },
+  "keywords": [
+    "cordova",
+    "plugin",
+    "template"
+  ],
+  "homepage": "https://github.com/cortneythomas/cordova-plugin-universal-links#readme",
+  "main": "links.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
 }
