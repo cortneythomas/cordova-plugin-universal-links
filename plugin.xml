@@ -12,6 +12,7 @@
 </js-module>
 
 <platform name="ios">
+    <hook src="hooks/beforeInstall.js" type="before_plugin_install" />
     <config-file target="config.xml" parent="/*">
         <feature name="UniversalLinks">
             <param name="ios-package" value="UniversalLinks" onload="true" />
