@@ -18,8 +18,36 @@
             <param name="ios-package" value="UniversalLinks" onload="true" />
         </feature>
     </config-file>
+    
     <header-file src="src/ios/UniversalLinks.h" />
     <source-file src="src/ios/UniversalLinks.m" />
+
+    <source-file src="src/ios/AppDelegate+UniversalLinksPlugin.m"/>
+    <header-file src="src/ios/AppDelegate+UniversalLinksPlugin.h"/>
+
+    <source-file src="src/ios/JS/CDVPluginResult+UniversalLinks.m" target-dir="JS/"/>
+    <header-file src="src/ios/JS/CDVPluginResult+UniversalLinks.h" target-dir="JS/"/>
+
+    <source-file src="src/ios/JS/CDVInvokedUrlCommand+UniversalLinks.m" target-dir="JS/"/>
+    <header-file src="src/ios/JS/CDVInvokedUrlCommand+UniversalLinks.h" target-dir="JS/"/>
+
+    <source-file src="src/ios/Model/Host.m" target-dir="Model/"/>
+    <header-file src="src/ios/Model/Host.h" target-dir="Model/"/>
+
+    <source-file src="src/ios/Model/Path.m" target-dir="Model/"/>
+    <header-file src="src/ios/Model/Path.h" target-dir="Model/"/>
+
+    <source-file src="src/ios/Parser/XML/XmlTags.m" target-dir="Parser/XML/"/>
+    <header-file src="src/ios/Parser/XML/XmlTags.h" target-dir="Parser/XML/"/>
+
+    <source-file src="src/ios/Parser/XML/XmlParser.m" target-dir="Parser/XML/"/>
+    <header-file src="src/ios/Parser/XML/XmlParser.h" target-dir="Parser/XML/"/>
+
+    <source-file src="src/ios/Parser/JSON/JsonParser.m" target-dir="Parser/JSON/"/>
+    <header-file src="src/ios/Parser/JSON/JsonParser.h" target-dir="Parser/JSON/"/>
+
+    <source-file src="src/ios/Utils/NSBundle+UniversalLinks.m" target-dir="Utils/"/>
+    <header-file src="src/ios/Utils/NSBundle+UniversalLinks.h" target-dir="Utils/"/>
 </platform>
 
 </plugin>
