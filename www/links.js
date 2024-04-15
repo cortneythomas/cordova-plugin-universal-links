@@ -5,13 +5,14 @@ const DEFAULT_EVENT_NAME = "didLaunchAppFromLink";
 
 // Plugin methods on the native side that can be called from JavaScript
 const pluginNativeMethod = {
-  SUBSCRIBE: "jsSubscribeForEvent",
-  UNSUBSCRIBE: "jsUnsubscribeFromEvent",
+  ECHO: "echo",
+  SUBSCRIBE: "subscribe",
+  UNSUBSCRIBE: "unsubscribe",
 };
 
 const UniversalLinks = {
   echo: function (phrase, callback) {
-    exec(callback, null, PLUGIN_NAME, "echo", [phrase]);
+    exec(callback, null, PLUGIN_NAME, pluginNativeMethod.ECHO, [phrase]);
   },
   subscribe: function (eventName, callback) {
     console.log('cortney eventname in subscribe', eventName)
