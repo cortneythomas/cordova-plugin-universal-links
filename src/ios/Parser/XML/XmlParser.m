@@ -36,6 +36,9 @@
     [configParser parse];
 
     NSLog(@"Cortney _hostsList in parseConfig: %@", _hostsList);
+    for (Host *cortneyHost in _hostsList) {
+        NSLog(@"Cortney each host in supported host in parser: %@", cortneyHost.name);
+    }
     return _hostsList;
 }
 
