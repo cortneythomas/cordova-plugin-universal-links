@@ -35,6 +35,7 @@
     [configParser setDelegate:self];
     [configParser parse];
 
+    NSLog(@"Cortney _hostsList in parseConfig: %@", _hostsList);
     return _hostsList;
 }
 

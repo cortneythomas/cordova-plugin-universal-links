@@ -16,6 +16,7 @@ static NSString *const PLUGIN_NAME = @"UniversalLinks";
 
     // get instance of the plugin and let it handle the userActivity object
     UniversalLinks *plugin = [self.viewController getCommandInstance:PLUGIN_NAME];
+    NSLog(@"Cortney in app delegate four: %@", plugin);
     if (plugin == nil) {
         return NO;
     }

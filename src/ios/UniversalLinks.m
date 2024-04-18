@@ -84,7 +84,7 @@
 }
 
 - (void)localInit {
-  NSLog(@"Cortney localInit: %@", _supportedHosts);
+    NSLog(@"Cortney _supportedHosts in localInit: %@", _supportedHosts);
     if (_supportedHosts) {
         return;
     }
@@ -94,6 +94,7 @@
     // Get supported hosts from the config.xml or www/ul.json.
     // For now priority goes to json config.
     _supportedHosts = [self getSupportedHostsFromPreferences];
+     NSLog(@"Cortney _supportedHosts in localInit at END: %@", _supportedHosts);
 }
 
 /**
@@ -158,8 +159,9 @@
     [self localInit];
 
     NSURL *launchURL = userActivity.webpageURL;
+    NSLog(@"Cortney launchURL in handleuseractivity: %@", launchURL);
     Host *host = [self findHostByURL:launchURL];
-    NSLog(@"Cortney host is handleuseractivity: %@", host);
+    
     if (host == nil) {
         return NO;
     }
